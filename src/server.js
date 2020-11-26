@@ -17,7 +17,7 @@ app.use(bodyParser.json())
 const schema = gql`
   type Query {
     hello: String
-    postToSheet(email: String!, apnt_date: String!, apnt_time: String!, first_name: String!, middle_name: String, last_name: String!, phone: String!, dob: String!, traveler: Boolean!, gender: String!, test: String!, order: String!, agreement: Boolean!): PostSuccess
+    postToSheet(email: String!, apnt_date: String!, apnt_time: String!, first_name: String!, middle_name: String, last_name: String!, phone: String!, dob: String!, traveler: Boolean!, gender: String!, test: String!, order: String!, agreement: Boolean!): PostSuccess!
   }
   type PostSuccess {
     message: String
@@ -30,12 +30,12 @@ const resolvers = {
         const postOnSheet = await postToSheet(args)
         if(postOnSheet) {
           return {
-            message: 'bbbb'
+            message: 'Form data has been successfully stored on Google Sheet'
           }
         }
         else {
           return {
-            message: 'bbb'
+            message: 'Something went wrong! Response couldn\'t be processed at this itme!'
           }
         }
       }
