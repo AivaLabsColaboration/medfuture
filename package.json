@@ -1,0 +1,33 @@
+{
+  "name": "medfuture",
+  "version": "1.0.0",
+  "description": "Google Sheet Resopnse Handler - MedFuture",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AivaLabsColaboration/medfuture.git"
+  },
+  "author": "Tahmid Hasan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AivaLabsColaboration/medfuture/issues"
+  },
+  "homepage": "https://github.com/AivaLabsColaboration/medfuture#readme",
+  "dependencies": {
+    "apollo-server-express": "^2.19.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "form-data": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7"
+  }
+}
