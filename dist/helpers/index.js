@@ -35,7 +35,7 @@ function postToSheet(data) {
     formData.append('Accord / Agreement', data.agreement ? 'Accepted' : 'Not Accepted');
 
     try {
-      formData.submit(process.env.FORM_URL, (error, res) => {
+      formData.submit(process.env.SCRIPT_URI, (error, res) => {
         resolve(true);
       });
     } catch (e) {
@@ -60,7 +60,7 @@ function updateSheet(data) {
     formData.append('order_id', data.order_id);
 
     try {
-      formData.submit(process.env.FORM_URL, (error, res) => {
+      formData.submit(process.env.SCRIPT_URI, (error, res) => {
         if (error) {
           reject(error);
         }
@@ -88,7 +88,7 @@ function updatePayment(data) {
     formData.append('order_id', data.order_id);
 
     try {
-      formData.submit(process.env.FORM_URL, (error, res) => {
+      formData.submit(process.env.SCRIPT_URI, (error, res) => {
         if (error) {
           reject(error);
         }

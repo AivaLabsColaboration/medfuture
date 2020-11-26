@@ -23,7 +23,7 @@ export function postToSheet (data) {
     formData.append('Accord / Agreement', data.agreement ? 'Accepted' : 'Not Accepted')
 
     try {
-      formData.submit(process.env.FORM_URL, (error, res) => {
+      formData.submit(process.env.SCRIPT_URI, (error, res) => {
         console.log(res.statusCode)
         console.log(res.statusMessage)
 
@@ -52,7 +52,7 @@ export function updateSheet (data) {
     formData.append('order_id', data.order_id);
     console.log('Happen')
     try {
-      formData.submit(process.env.FORM_URL, (error, res) => {
+      formData.submit(process.env.SCRIPT_URI, (error, res) => {
         console.log(res.statusCode)
         console.log(res.statusMessage)
         if(error) {
@@ -81,7 +81,7 @@ export function updatePayment (data) {
     formData.append('order_id', data.order_id);
     console.log('Payment Update')
     try {
-      formData.submit(process.env.FORM_URL, (error, res) => {
+      formData.submit(process.env.SCRIPT_URI, (error, res) => {
         console.log(res.statusCode)
         console.log(res.statusMessage)
         if(error) {
