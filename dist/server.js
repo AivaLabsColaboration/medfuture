@@ -30,11 +30,11 @@ app.use(_bodyParser.default.urlencoded({
 app.use(_bodyParser.default.json());
 const schema = (0, _apolloServerExpress.gql)(_t || (_t = _`
   type Query {
-    hello: String!
-    postToSheet(email: String!, apnt_date: String!, apnt_time: String!, first_name: String!, middle_name: String, last_name: String!, phone: String!, dob: String!, traveler: Boolean!, gender: String!, test: String!, order: String!, agreement: Boolean!): PostSuccess!
+    hello: String
+    postToSheet(email: String!, apnt_date: String!, apnt_time: String!, first_name: String!, middle_name: String, last_name: String!, phone: String!, dob: String!, traveler: Boolean!, gender: String!, test: String!, order: String!, agreement: Boolean!): PostSuccess
   }
   type PostSuccess {
-    message: String!
+    message: String
   }
 `));
 const resolvers = {
