@@ -27,6 +27,7 @@ app.post('/sheet', async (req, res) => {
     const postOnSheet = await (0, _helpers.postToSheet)(req.body);
 
     if (postOnSheet) {
+			console.log('Successfull!!!!!!!!!!!!!')
       res.status(201).json({
         message: 'Form data has been successfully stored on Google Sheet'
       });
