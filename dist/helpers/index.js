@@ -75,7 +75,7 @@ function updateSheet(data) {
           console.log(error);
           reject(error);
         }
-
+        console.log(res.statusText)
         resolve(true);
       });
     } catch (e) {
@@ -107,7 +107,7 @@ function updatePayment(data) {
           console.log(error);
           reject(error);
         }
-
+        console.log(res.statusText)
         resolve(true);
       });
     } catch (e) {
