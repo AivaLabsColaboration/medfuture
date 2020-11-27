@@ -20,8 +20,8 @@ function postToSheet(data) {
     });
     const formData = new _formData.default();
     formData.append('Email Address', data.email);
-    formData.append('Date de votre Rendez-vous / date of your appointment', data.appnt_date);
-    formData.append('Heure de votre Rendez-vous / Hour of your appointment', data.appnt_time);
+    formData.append('Date de votre Rendez-vous / date of your appointment', data.appnt_date ? data.appnt_date : '');
+    formData.append('Heure de votre Rendez-vous / Hour of your appointment', data.appnt_time ? data.appnt_time : '');
     formData.append('Prénom / First name', data.first_name);
     formData.append('Deuxième prénom / Middle name', data.middle_name);
     formData.append('Nom de famille / Last Name', data.last_name);
