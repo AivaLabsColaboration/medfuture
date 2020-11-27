@@ -76,6 +76,7 @@ function updateSheet(data) {
           reject(error);
         }
 
+        console.log(res);
         resolve(true);
       });
     } catch (e) {
@@ -98,7 +99,7 @@ function updatePayment(data) {
     console.log(data);
     const formData = new _formData.default();
     formData.append('request', 'payment_update');
-    formData.append('order_id', data.order_id);
+    formData.append('order_id', data.order_id.toString());
     console.log('Payment Update');
 
     try {

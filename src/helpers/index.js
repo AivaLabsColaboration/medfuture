@@ -56,6 +56,7 @@ export function updateSheet (data) {
           console.log(error)
           reject(error)
         }
+        console.log(res)
         resolve(true)
       })
     }
@@ -75,7 +76,7 @@ export function updatePayment (data) {
     const formData = new FormData();
 
     formData.append('request', 'payment_update');
-    formData.append('order_id', data.order_id);
+    formData.append('order_id', data.order_id.toString());
     console.log('Payment Update')
     try {
       formData.submit(process.env.SCRIPT_URI, (error, res) => {
